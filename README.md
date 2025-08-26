@@ -13,7 +13,7 @@ No user authentication, simplifying access while emphasizing idempotent, secure 
 Automated testing and deployment pipelines to ensure reliability and rapid iteration.
 
 ## Problem Addressed
-* SMEs increasingly need to accept online payments but face challenges including:
+*SMEs increasingly need to accept online payments but face challenges including:
 
 --Complexity of payment gateway integrations with diverse APIs.
 
