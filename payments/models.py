@@ -9,6 +9,9 @@ class BaseModel(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at =models.DateTimeField(auto_now=True)
 
+    class Meta:
+        abstract = True
+
 class Payment(BaseModel):
     STATUS_CHOICES = [
         ("pending", "Pending"),
@@ -20,7 +23,7 @@ class Payment(BaseModel):
     payment_id = models.CharField(max_length=100, unique=True)
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
-    email = models.EmailField(unique=True)
+    email = models.EmailField()
     phone_number = models.CharField(max_length=15)
     amount = models.DecimalField(max_digits=10, decimal_places=2)
     currency = models.CharField(max_length=10, default='NGN')
