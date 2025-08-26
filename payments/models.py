@@ -19,7 +19,9 @@ class Payment(BaseModel):
     ]
     
     reference =models.CharField(max_length=100, null=True, blank=True)
-    payment_id = models.CharField(max_length=100, unique=True)
+    #payment_id = models.CharField(max_length=100, unique=True)
+    payment_id = models.UUIDField(default=uuid.uuid4, unique=True, editable=False)
+
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
     email = models.EmailField()
